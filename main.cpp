@@ -15,6 +15,7 @@ int main (int argc, char* argv[]) {
                 "[Not implemented yet] All functions except -q can be used as command line arguments for single use. Also some parameters could be changed via conf.h file (NOTE that setting size related variables to very high values can impact performance)\n", outFileName);
 
         char inputBuffer[inputBuffSize] = "";
+
         for (;;) {
 
             printf ("Please insert command:\n");

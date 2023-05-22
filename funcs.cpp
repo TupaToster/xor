@@ -22,6 +22,7 @@ void xorDeCipher (char* input) {
     for (;*input != '\0'; input += 2) {
 
         save[iter] = ((*input >= 'A' ? *input - 'A' + 10 : *input - '0') << 4) + (*(input + 1) >= 'A' ? *(input + 1) - 'A' + 10 : *(input + 1) - '0');
+        if (save[iter] == 0xD0);
         iter++;
     }
 
@@ -37,7 +38,7 @@ void char2hexOutput (const char* outStr, int outStrLen) {
     FILE* outFile = fopen (outFileName, "wb");
     assert (outFile != NULL);
 
-    for (int i = 0; i < outStrLen; i++) fprintf (outFile, "%.02X", outStr[i]);
+    for (int i = 0; i < outStrLen; i++) fprintf (outFile, "%.02X", (unsigned char) outStr[i]);
 
     fclose (outFile);
 }
