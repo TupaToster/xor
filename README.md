@@ -1,4 +1,4 @@
-### A simple xor cipher / decipher program
+### A simple xor cipher / decipher program (!NOW WITH RUSSIAN!)
 It's a simple program that can be compiled on your machine accordingly so that your system supports it. Though i didn't test its compatibility to windows, but if you have linux and g++ it should work.
 ## Functionality overview
 # Ciphering
