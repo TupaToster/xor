@@ -1,10 +1,10 @@
 #include "conf.h"
 
-void xorCipher (char* input) {
+void xorCipher (char* input, int len) {
 
     const char* key = xorKey;
 
-    while (*input != '\0') {
+    for (int i = 0; i < len; i++) {
 
         *input ^= *(key);
         key++;
@@ -28,7 +28,7 @@ void xorDeCipher (char* input) {
 
     save[iter] = '\0';
 
-    xorCipher (save);
+    xorCipher (save, iter);
 }
 
 void char2hexOutput (const char* outStr, int outStrLen) {

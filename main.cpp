@@ -44,7 +44,7 @@ int main (int argc, char* argv[]) {
 
                     len = strlen (inputBuffer) - 1; // saves strlen
                     inputBuffer[len] = '\0'; // sets \0
-                    xorCipher (inputBuffer); // ciphers the thing
+                    xorCipher (inputBuffer, len); // ciphers the thing
 
                     char2hexOutput (inputBuffer, len);  // outputs turning each char to %.02X
 
